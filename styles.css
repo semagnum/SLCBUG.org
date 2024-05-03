@@ -8,8 +8,10 @@ body {
   font-weight: 400;
   font-style: normal;
   margin: 0;
-  background-color: #333;
+  background-color: #1d1d1d;
   color: #ccc;
+  background-image: radial-gradient(#282828 0.1rem, transparent 0.15rem);
+  background-size: 4rem 4rem;
 }
 em {
   font-style: italic;
@@ -24,7 +26,7 @@ h3 {
   position: relative;
   width: 100%;
   background-color: #69264a;
-  background-image: url("../assets/header.gif");
+  background-image: url("./assets/header.gif");
   background-size: cover;
   background-position: center;
 }
@@ -41,7 +43,7 @@ h1 {
   margin: 0;
   padding: 0;
   padding-bottom: 25%;
-  background-image: url("../assets/slc_blender_user_group_logo.png");
+  background-image: url("./assets/slc_blender_user_group_logo.png");
   background-size: contain;
   position: relative;
 }
@@ -64,4 +66,46 @@ a:visited {
 img {
   max-width: 100%;
   display: block;
+}
+
+.navBar {
+  display: flex;
+  background-color: #181818;
+}
+
+.navDecoration {
+  float: left;
+}
+.navDecorationLeft {
+}
+.navDecorationRight {
+  float: right;
+}
+.navBarPageSelectors {
+}
+.navBarList {
+  display: flex;
+  margin: 0;
+  justify-self: center;
+}
+li.navBarTab {
+  background-color: #232323;
+  list-style-type: none;
+  padding: 5px 10px 0;
+  margin: 5px 3px 0;
+  border-radius: 15px 15px 0 0;
+}
+
+.navBarList li:hover {
+  background-color: purple;
+}
+.navBarTab a {
+  color: #969696;
+  font-size: 1.5em;
+}
+li.navBarTab.navBarCurrentPage {
+  background-color: #303030;
+}
+.navBarTab.navBarCurrentPage a {
+  color: #f2f2f2;
 }
