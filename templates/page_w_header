@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles.css" />
-    <title>Learning Resources</title>
+    <meta name="description" content="Learning and using Blender together!" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>SLC Blender User Group</title>
   </head>
   <body>
     <header class="header_bg">
@@ -19,12 +20,12 @@
     </header>
     <nav class="navBar">
       <div class="navBarPageSelectors">
-        <!-- Add navBarCurrentPage to current page-->
+        <!-- Add navBarCurrentPage class to current tab to be highlighted-->
         <ul class="navBarList">
           <li class="navBarTab navHome">
             <a href="../index.html">Home</a>
           </li>
-          <li class="navBarTab navLearning navBarCurrentPage">
+          <li class="navBarTab navLearning">
             <a href="../learning/index.html">Learning</a>
           </li>
           <li class="navBarTab navCommunity">
@@ -33,23 +34,6 @@
         </ul>
       </div>
     </nav>
-    <main>
-      <h2>Resources:</h2>
-      <ul>
-        <li>
-          <a href="https://blender.org/" target="_blank"
-            >https://blender.org/</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/playlist?list=PLa1F2ddGya_-UvuAqHAksYnB0qL9yWDO6"
-            target="_blank"
-            >Blender Fundamentals video training playlist</a
-          >
-        </li>
-      </ul>
-      <img src="../assets/Under_Construction.gif" style="width: 320px" />
-    </main>
+    <main></main>
   </body>
 </html>
