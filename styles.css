@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Global styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -63,7 +65,7 @@ h1 span {
   max-width: 960px;
 }
 .content {
-  padding: 0 32px 32px 32px;
+  padding: 0 0.8rem;
 }
 a,
 a:link,
@@ -75,17 +77,79 @@ img {
   display: block;
 }
 
-.navBar {
-  background-color: #181818;
+input[type="radio"] {
+  display: none;
 }
 
+@media (min-width: 768px) {
+  .content {
+    padding: 0 2rem;
+  }
+}
+
+/* Navbar styles */
+.navBar {
+  background-color: #181818;
+  display: grid;
+  grid-auto-flow: column;
+}
+
+/* Hide navbar decoration on mobile */
 .navDecoration {
+  display: none;
+}
+/* Hide extra navbar decoration while on narrow display */
+.toolBar-button.extraDecoration {
+  display: none;
 }
 .navDecorationLeft {
+  justify-self: left;
 }
 .navDecorationRight {
+  justify-self: right;
 }
 .navBarPageSelectors {
+}
+
+.toolBar-button {
+  background-color: #282828;
+  border: 1px solid;
+  border-color: #8e8e8e;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0.2rem 0.2rem 0 rgba(0, 0, 0, 0.34);
+  margin: 0 0.25rem;
+  display: flex;
+  overflow: hidden;
+}
+.toolBar-button:hover {
+  background-color: #454545;
+}
+.toolBar-icon {
+  height: 2rem;
+  width: 2rem;
+}
+.toolBar-shading-toggle {
+}
+.toolBar-shading-option {
+  border-right: 1px solid #181818;
+  background-color: #545454;
+}
+
+.toolBar-shading-option:has(input[type="radio"]:checked) {
+  background-color: #4772b3;
+}
+
+.icon-link {
+  text-decoration: none;
+}
+.icon-down-arrow {
+  scale: 0.8;
+  width: 1.25rem;
+}
+.icon-text {
+  font-size: 1.25rem;
 }
 ul.navBarList {
   display: block;
@@ -119,22 +183,33 @@ li.navBarTab.navBarCurrentPage a {
   color: #f2f2f2;
 }
 @media (min-width: 768px) {
+  .navBar {
+    grid-template-columns: 1fr 400px 1fr;
+  }
+  .navDecoration {
+    display: flex;
+    align-items: center;
+    padding: 0.25rem;
+  }
   .navBarTab a {
     font-size: 1.5rem;
   }
 }
 
+@media (min-width: 876px) {
+  .toolBar-button.extraDecoration {
+    display: flex;
+  }
+}
+
+/* Graph node styles */
 .node-grid-row {
   display: grid;
-  padding: 0.75em;
+  padding: 0.5rem 0.15rem;
 }
 .node-block {
   display: inline-grid;
-  height: fit-content;
-  width: fit-content;
-  margin: 1rem;
-  position: relative;
-  width: 18 rem;
+  margin: 0.5rem;
   box-shadow: 0 0 0 0.15rem #fff;
   border-radius: 0.5rem;
 }
@@ -169,7 +244,6 @@ li.navBarTab.navBarCurrentPage a {
 .node-label-text {
   color: #ededed;
   cursor: grab;
-  flex: 1;
   font-size: large;
 }
 
@@ -182,17 +256,18 @@ li.navBarTab.navBarCurrentPage a {
   padding: 0.75rem;
 }
 
+.node-entry {
+  align-items: center;
+  display: flex;
+  padding: 0.2rem 1rem;
+}
+
 .node-value {
   text-align: justify;
   flex: 1;
   width: 100%;
   color: #aaa;
-}
-
-.node-entry {
-  align-items: center;
-  display: flex;
-  padding: 0.2rem 1rem;
+  margin: 0 -2rem;
 }
 
 .node-socket {
@@ -230,4 +305,19 @@ li.navBarTab.navBarCurrentPage a {
 
 .node-socket:hover {
   transform: scale(1.5);
+}
+
+@media (min-width: 768px) {
+  .node-grid-row {
+    padding: 0.75rem;
+  }
+  .node-block {
+    margin: 0.75rem;
+  }
+  .node-body {
+    padding: 0.75rem;
+  }
+  .node-value {
+    margin: 0;
+  }
 }

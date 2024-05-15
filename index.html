@@ -19,6 +19,40 @@
       </div>
     </header>
     <nav class="navBar">
+      <div class="navDecoration navDecorationLeft">
+        <div class="toolBar-button">
+          <a class="icon-link" href="https://www.blender.org/" target="_blank">
+            <img
+              src="./assets/svg/blender.svg"
+              alt="Blender Logo"
+              class="toolBar-icon"
+            />
+          </a>
+        </div>
+        <div class="toolBar-button extraDecoration">
+          <img
+            src="./assets/svg/node_material.svg"
+            alt="Icon representing shader editor from Blender UI"
+            class="toolBar-icon"
+          />
+          <img
+            src="./assets/svg/down_arrow.svg"
+            class="toolBar-icon icon-down-arrow"
+          />
+        </div>
+        <div class="toolBar-button">
+          <img
+            src="./assets/svg/object_data.svg"
+            alt="Icon representing object data from Blender UI"
+            class="toolBar-icon"
+          />
+          <div class="icon-text">Home</div>
+          <img
+            src="./assets/svg/down_arrow.svg"
+            class="toolBar-icon icon-down-arrow"
+          />
+        </div>
+      </div>
       <div class="navBarPageSelectors">
         <ul class="navBarList">
           <li class="navBarTab navHome navBarCurrentPage">
@@ -31,6 +65,67 @@
             <a href="./community/index.html">Community</a>
           </li>
         </ul>
+      </div>
+      <div class="navDecoration navDecorationRight">
+        <div class="toolBar-button toolBar-shading-toggle">
+          <label class="toolBar-shading-option">
+            <input
+              type="radio"
+              id="shading-wireframe"
+              value="shading-wireframe"
+              name="shading-picker"
+              checked
+            />
+            <img
+              src="./assets/svg/shading_wire.svg"
+              alt="Icon representing shading options from Blender UI"
+              class="toolBar-icon"
+            />
+          </label>
+          <label class="toolBar-shading-option">
+            <input
+              type="radio"
+              id="shading-solid"
+              value="shading-solid"
+              name="shading-picker"
+            />
+            <img
+              src="./assets/svg/shading_solid.svg"
+              alt="Icon representing shading options from Blender UI"
+              class="toolBar-icon"
+            />
+          </label>
+          <label class="toolBar-shading-option">
+            <input
+              type="radio"
+              value="shading-material"
+              id="shading-material"
+              name="shading-picker"
+            />
+            <img
+              src="./assets/svg/shading_texture.svg"
+              alt="Icon representing shading options from Blender UI"
+              class="toolBar-icon"
+            />
+          </label>
+          <label class="toolBar-shading-option">
+            <input
+              type="radio"
+              value="shading-rendered"
+              id="shading-rendered"
+              name="shading-picker"
+            />
+            <img
+              src="./assets/svg/shading_rendered.svg"
+              alt="Icon representing shading options from Blender UI"
+              class="toolBar-icon"
+            />
+          </label>
+          <img
+            src="./assets/svg/down_arrow.svg"
+            class="toolBar-icon icon-down-arrow"
+          />
+        </div>
       </div>
     </nav>
     <main>
