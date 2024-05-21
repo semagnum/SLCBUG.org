@@ -68,63 +68,87 @@
       </div>
       <div class="navDecoration navDecorationRight">
         <div class="toolBar-button toolBar-shading-toggle">
-          <label class="toolBar-shading-option">
-            <input
-              type="radio"
-              id="shading-wireframe"
-              value="shading-wireframe"
-              name="shading-picker"
-              checked
-            />
-            <img
-              src="./assets/svg/shading_wire.svg"
-              alt="Icon representing shading options from Blender UI"
-              class="toolBar-icon"
-            />
-          </label>
-          <label class="toolBar-shading-option">
-            <input
-              type="radio"
-              id="shading-solid"
-              value="shading-solid"
-              name="shading-picker"
-            />
-            <img
-              src="./assets/svg/shading_solid.svg"
-              alt="Icon representing shading options from Blender UI"
-              class="toolBar-icon"
-            />
-          </label>
-          <label class="toolBar-shading-option">
-            <input
-              type="radio"
-              value="shading-material"
-              id="shading-material"
-              name="shading-picker"
-            />
-            <img
-              src="./assets/svg/shading_texture.svg"
-              alt="Icon representing shading options from Blender UI"
-              class="toolBar-icon"
-            />
-          </label>
-          <label class="toolBar-shading-option">
-            <input
-              type="radio"
-              value="shading-rendered"
-              id="shading-rendered"
-              name="shading-picker"
-            />
-            <img
-              src="./assets/svg/shading_rendered.svg"
-              alt="Icon representing shading options from Blender UI"
-              class="toolBar-icon"
-            />
-          </label>
-          <img
-            src="./assets/svg/down_arrow.svg"
-            class="toolBar-icon icon-down-arrow"
+          <input
+            type="radio"
+            id="shading-wireframe"
+            value="shading-wireframe"
+            name="shading-picker"
+            checked
           />
+          <input
+            type="radio"
+            id="shading-solid"
+            value="shading-solid"
+            name="shading-picker"
+          />
+          <input
+            type="radio"
+            value="shading-material"
+            id="shading-material"
+            name="shading-picker"
+          />
+          <input
+            type="radio"
+            value="shading-rendered"
+            id="shading-rendered"
+            name="shading-picker"
+          />
+          <div class="shading-toggle-buttons toolBar-button">
+            <label class="toolBar-shading-option" for="shading-wireframe">
+              <img
+                src="./assets/svg/shading_wire.svg"
+                alt="Icon representing shading options from Blender UI"
+                class="toolBar-icon"
+              />
+            </label>
+            <label class="toolBar-shading-option" for="shading-solid">
+              <img
+                src="./assets/svg/shading_solid.svg"
+                alt="Icon representing shading options from Blender UI"
+                class="toolBar-icon"
+              />
+            </label>
+            <label class="toolBar-shading-option" for="shading-material">
+              <img
+                src="./assets/svg/shading_texture.svg"
+                alt="Icon representing shading options from Blender UI"
+                class="toolBar-icon"
+              />
+            </label>
+            <label class="toolBar-shading-option" for="shading-rendered">
+              <img
+                src="./assets/svg/shading_rendered.svg"
+                alt="Icon representing shading options from Blender UI"
+                class="toolBar-icon"
+              />
+            </label>
+            <img
+              src="./assets/svg/down_arrow.svg"
+              class="toolBar-icon icon-down-arrow"
+            />
+          </div>
+          <div id="rendered-goat-container">
+            <img
+              class="rendered-goat-image"
+              id="goat-image-wireframe"
+              src="./assets/render_goats/goat_wireframe.webp"
+            />
+            <img
+              class="rendered-goat-image"
+              id="goat-image-solid"
+              src="./assets/render_goats/goat_solid.webp"
+            />
+            <img
+              class="rendered-goat-image"
+              id="goat-image-material"
+              src="./assets/render_goats/goat_material_preview.webp"
+            />
+            <img
+              class="rendered-goat-image"
+              id="goat-image-rendered"
+              src="./assets/render_goats/goat_rendered.webp"
+            />
+          </div>
         </div>
       </div>
     </nav>
