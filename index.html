@@ -22,35 +22,17 @@
       <div class="navDecoration navDecorationLeft">
         <div class="toolBar-button">
           <a class="icon-link" href="https://www.blender.org/" target="_blank">
-            <img
-              src="./assets/svg/blender.svg"
-              alt="Blender Logo"
-              class="toolBar-icon"
-            />
+            <div class="toolBar-icon icon-image-blender-logo"></div>
           </a>
         </div>
         <div class="toolBar-button extraDecoration">
-          <img
-            src="./assets/svg/node_material.svg"
-            alt="Icon representing shader editor from Blender UI"
-            class="toolBar-icon"
-          />
-          <img
-            src="./assets/svg/down_arrow.svg"
-            class="toolBar-icon icon-down-arrow"
-          />
+          <div class="toolBar-icon icon-image-node-material"></div>
+          <div class="icon-down-arrow"></div>
         </div>
         <div class="toolBar-button">
-          <img
-            src="./assets/svg/object_data.svg"
-            alt="Icon representing object data from Blender UI"
-            class="toolBar-icon"
-          />
+          <div class="toolBar-icon icon-image-object-data"></div>
           <div class="icon-text">Home</div>
-          <img
-            src="./assets/svg/down_arrow.svg"
-            class="toolBar-icon icon-down-arrow"
-          />
+          <div class="icon-down-arrow"></div>
         </div>
       </div>
       <div class="navBarPageSelectors">
@@ -67,6 +49,29 @@
         </ul>
       </div>
       <div class="navDecoration navDecorationRight">
+        <div class="toolBar-button">
+          <div class="toolBar-icon icon-image-scene-data"></div>
+          <div class="icon-down-arrow"></div>
+          <div class="icon-text">Scene</div>
+          <div class="icon-down-arrow"></div>
+        </div>
+        <div class="toolBar-button toolBar-gizmo-toggle">
+          <div class="gizmo-toggle">
+            <input
+              type="checkbox"
+              id="gizmo-overlay"
+              name="gizmo-overlay"
+              value="gizmo"
+            />
+            <div class="gizmo-icon">
+              <label for="gizmo-overlay">
+                <div class="toolBar-icon icon-image-gizmo"></div>
+              </label>
+            </div>
+            <div class="gizmo-reveal-image"></div>
+          </div>
+          <div class="icon-down-arrow"></div>
+        </div>
         <div class="toolBar-button toolBar-shading-toggle">
           <input
             type="radio"
@@ -95,59 +100,24 @@
           />
           <div class="shading-toggle-buttons toolBar-button">
             <label class="toolBar-shading-option" for="shading-wireframe">
-              <img
-                src="./assets/svg/shading_wire.svg"
-                alt="Icon representing shading options from Blender UI"
-                class="toolBar-icon"
-              />
+              <div class="toolBar-icon icon-image-shading-wireframe"></div>
             </label>
             <label class="toolBar-shading-option" for="shading-solid">
-              <img
-                src="./assets/svg/shading_solid.svg"
-                alt="Icon representing shading options from Blender UI"
-                class="toolBar-icon"
-              />
+              <div class="toolBar-icon icon-image-shading-solid"></div>
             </label>
             <label class="toolBar-shading-option" for="shading-material">
-              <img
-                src="./assets/svg/shading_texture.svg"
-                alt="Icon representing shading options from Blender UI"
-                class="toolBar-icon"
-              />
+              <div class="toolBar-icon icon-image-shading-material"></div>
             </label>
             <label class="toolBar-shading-option" for="shading-rendered">
-              <img
-                src="./assets/svg/shading_rendered.svg"
-                alt="Icon representing shading options from Blender UI"
-                class="toolBar-icon"
-              />
+              <div class="toolBar-icon icon-image-shading-rendered"></div>
             </label>
-            <img
-              src="./assets/svg/down_arrow.svg"
-              class="toolBar-icon icon-down-arrow"
-            />
+            <div class="icon-down-arrow"></div>
           </div>
           <div id="rendered-goat-container">
-            <img
-              class="rendered-goat-image"
-              id="goat-image-wireframe"
-              src="./assets/render_goats/goat_wireframe.webp"
-            />
-            <img
-              class="rendered-goat-image"
-              id="goat-image-solid"
-              src="./assets/render_goats/goat_solid.webp"
-            />
-            <img
-              class="rendered-goat-image"
-              id="goat-image-material"
-              src="./assets/render_goats/goat_material_preview.webp"
-            />
-            <img
-              class="rendered-goat-image"
-              id="goat-image-rendered"
-              src="./assets/render_goats/goat_rendered.webp"
-            />
+            <div class="rendered-goat-image viewport-goat-wireframe"></div>
+            <div class="rendered-goat-image viewport-goat-solid"></div>
+            <div class="rendered-goat-image viewport-goat-material"></div>
+            <div class="rendered-goat-image viewport-goat-rendered"></div>
           </div>
         </div>
       </div>

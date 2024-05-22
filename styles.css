@@ -76,12 +76,14 @@ img {
   display: block;
 }
 
-input[type="radio"] {
+input[type="radio"],
+input[type="checkbox"] {
   display: none;
 }
 
 #rendered-goat-container {
   position: absolute;
+  display: none;
   top: 0.5rem;
   right: 0.5rem;
 }
@@ -89,6 +91,9 @@ input[type="radio"] {
 .rendered-goat-image {
   display: none;
   height: 14rem;
+  width: 14rem;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media (min-width: 768px) {
@@ -148,11 +153,9 @@ input[type="radio"] {
 div.toolBar-button.shading-toggle-buttons:hover {
   background-color: #282828;
 }
-.toolBar-icon {
-  height: 2rem;
-  width: 2rem;
-}
-.toolBar-shading-toggle {
+
+.toolBar-shading-toggle,
+.toolBar-gizmo-toggle {
   display: none;
 }
 .toolBar-shading-option {
@@ -179,34 +182,47 @@ div.toolBar-button.shading-toggle-buttons:hover {
   background-color: #4772b3;
 }
 
+.gizmo-toggle input[type="checkbox"]:nth-child(1):checked ~ .gizmo-icon {
+  background-color: #4772b3;
+}
+.gizmo-reveal-image {
+  display: none;
+}
+
+.gizmo-toggle
+  input[type="checkbox"]:nth-child(1):checked
+  ~ .gizmo-reveal-image {
+  display: block;
+}
+
 .toolBar-shading-toggle
   input[type="radio"]:nth-child(1):checked
   ~ #rendered-goat-container
-  img:nth-child(1),
+  div:nth-child(1),
 .toolBar-shading-toggle
   input[type="radio"]:nth-child(2):checked
   ~ #rendered-goat-container
-  img:nth-child(2),
+  div:nth-child(2),
 .toolBar-shading-toggle
   input[type="radio"]:nth-child(3):checked
   ~ #rendered-goat-container
-  img:nth-child(3),
+  div:nth-child(3),
 .toolBar-shading-toggle
   input[type="radio"]:nth-child(4):checked
   ~ #rendered-goat-container
-  img:nth-child(4) {
+  div:nth-child(4) {
   display: block;
 }
 
 .icon-link {
   text-decoration: none;
 }
-.icon-down-arrow {
-  scale: 0.8;
-  width: 1.25rem;
-}
+
 .icon-text {
   font-size: 1.25rem;
+  background-color: #1f1f1f;
+  padding: 0.2rem 1.25rem;
+  height: 2rem;
 }
 ul.navBarList {
   display: block;
@@ -253,13 +269,14 @@ li.navBarTab.navBarCurrentPage a {
   }
 }
 
-@media (min-width: 876px) {
+@media (min-width: 900px) {
   .toolBar-button.extraDecoration {
     display: flex;
   }
 }
 @media (min-width: 1300px) {
-  .toolBar-shading-toggle {
+  .toolBar-shading-toggle,
+  .toolBar-gizmo-toggle {
     display: flex;
   }
 }
@@ -382,4 +399,68 @@ li.navBarTab.navBarCurrentPage a {
   .node-value {
     margin: 0;
   }
+}
+
+/*Icon images*/
+.toolBar-icon {
+  height: 2rem;
+  width: 2rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.icon-down-arrow {
+  background-image: url("./assets/svg/down_arrow.svg");
+  height: 1.25rem;
+  width: 1.25rem;
+}
+.icon-text + .icon-down-arrow {
+  background-color: #1f1f1f;
+  height: 2rem;
+  background-position: center;
+}
+.icon-image-blender-logo {
+  background-image: url("./assets/svg/blender.svg");
+}
+.icon-image-node-material {
+  background-image: url("./assets/svg/node_material.svg");
+}
+.icon-image-object-data {
+  background-image: url("./assets/svg/object_data.svg");
+}
+.icon-image-scene-data {
+  background-image: url("./assets/svg/scene_data.svg");
+}
+.icon-image-gizmo {
+  background-image: url("./assets/svg/gizmo.svg");
+}
+.icon-image-shading-wireframe {
+  background-image: url("./assets/svg/shading_wire.svg");
+}
+.icon-image-shading-solid {
+  background-image: url("./assets/svg/shading_solid.svg");
+}
+.icon-image-shading-material {
+  background-image: url("./assets/svg/shading_texture.svg");
+}
+.icon-image-shading-rendered {
+  background-image: url("./assets/svg/shading_rendered.svg");
+}
+.viewport-goat-wireframe {
+  background-image: url(./assets/render_goats/goat_wireframe.webp);
+}
+.gizmo-reveal-image {
+  background-image: url(./assets/gizmo.png);
+  position: absolute;
+  width: 12.5rem;
+  height: 12.5rem;
+  top: 20rem;
+}
+.viewport-goat-solid {
+  background-image: url(./assets/render_goats/goat_solid.webp);
+}
+.viewport-goat-material {
+  background-image: url(./assets/render_goats/goat_material_preview.webp);
+}
+.viewport-goat-rendered {
+  background-image: url(./assets/render_goats/goat_rendered.webp);
 }
