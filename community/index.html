@@ -18,8 +18,23 @@
       </div>
     </header>
     <nav class="navBar">
+      <div class="navDecoration navDecorationLeft">
+        <div class="toolBar-button">
+          <a class="icon-link" href="https://www.blender.org/" target="_blank">
+            <div class="toolBar-icon icon-image-blender-logo"></div>
+          </a>
+        </div>
+        <div class="toolBar-button extraDecoration">
+          <div class="toolBar-icon icon-image-node-material"></div>
+          <div class="icon-down-arrow"></div>
+        </div>
+        <div class="toolBar-button">
+          <div class="toolBar-icon icon-image-object-data"></div>
+          <div class="icon-text">Community</div>
+          <div class="icon-down-arrow"></div>
+        </div>
+      </div>
       <div class="navBarPageSelectors">
-        <!-- Add navBarCurrentPage to current page-->
         <ul class="navBarList">
           <li class="navBarTab navHome">
             <a href="../index.html">Home</a>
@@ -28,9 +43,82 @@
             <a href="../learning/index.html">Learning</a>
           </li>
           <li class="navBarTab navCommunity navBarCurrentPage">
-            <a href="../community/index.html ">Community</a>
+            <a href="../community/index.html">Community</a>
           </li>
         </ul>
+      </div>
+      <div class="navDecoration navDecorationRight">
+        <div class="toolBar-button">
+          <div class="toolBar-icon icon-image-scene-data"></div>
+          <div class="icon-down-arrow"></div>
+          <div class="icon-text">Scene.002</div>
+          <div class="icon-down-arrow"></div>
+        </div>
+        <div class="toolBar-button toolBar-gizmo-toggle">
+          <div class="gizmo-toggle">
+            <input
+              type="checkbox"
+              id="gizmo-overlay"
+              name="gizmo-overlay"
+              value="gizmo"
+            />
+            <div class="gizmo-icon">
+              <label for="gizmo-overlay">
+                <div class="toolBar-icon icon-image-gizmo"></div>
+              </label>
+            </div>
+            <div class="gizmo-reveal-image"></div>
+          </div>
+          <div class="icon-down-arrow"></div>
+        </div>
+        <div class="toolBar-button toolBar-shading-toggle">
+          <input
+            type="radio"
+            id="shading-wireframe"
+            value="shading-wireframe"
+            name="shading-picker"
+            checked
+          />
+          <input
+            type="radio"
+            id="shading-solid"
+            value="shading-solid"
+            name="shading-picker"
+          />
+          <input
+            type="radio"
+            value="shading-material"
+            id="shading-material"
+            name="shading-picker"
+          />
+          <input
+            type="radio"
+            value="shading-rendered"
+            id="shading-rendered"
+            name="shading-picker"
+          />
+          <div class="shading-toggle-buttons toolBar-button">
+            <label class="toolBar-shading-option" for="shading-wireframe">
+              <div class="toolBar-icon icon-image-shading-wireframe"></div>
+            </label>
+            <label class="toolBar-shading-option" for="shading-solid">
+              <div class="toolBar-icon icon-image-shading-solid"></div>
+            </label>
+            <label class="toolBar-shading-option" for="shading-material">
+              <div class="toolBar-icon icon-image-shading-material"></div>
+            </label>
+            <label class="toolBar-shading-option" for="shading-rendered">
+              <div class="toolBar-icon icon-image-shading-rendered"></div>
+            </label>
+            <div class="icon-down-arrow"></div>
+          </div>
+          <div id="rendered-goat-container">
+            <div class="rendered-goat-image viewport-goat-wireframe"></div>
+            <div class="rendered-goat-image viewport-goat-solid"></div>
+            <div class="rendered-goat-image viewport-goat-material"></div>
+            <div class="rendered-goat-image viewport-goat-rendered"></div>
+          </div>
+        </div>
       </div>
     </nav>
     <main>
