@@ -7,7 +7,7 @@
     <title>Learning Resources</title>
   </head>
   <body>
-    <header class="header_bg">
+    <header class="header-background">
       <div class="container">
         <h1>
           <span>
@@ -17,45 +17,45 @@
         </h1>
       </div>
     </header>
-    <nav class="navBar">
-      <div class="navDecoration navDecorationLeft">
-        <div class="toolBar-button">
+    <nav>
+      <div class="nav-decoration left">
+        <div class="nav-bar-button">
           <a class="icon-link" href="https://www.blender.org/" target="_blank">
-            <div class="toolBar-icon icon-image-blender-logo"></div>
+            <div class="nav-bar-icon icon-image-blender-logo"></div>
           </a>
         </div>
-        <div class="toolBar-button extraDecoration">
-          <div class="toolBar-icon icon-image-node-material"></div>
+        <div class="nav-bar-button extraDecoration">
+          <div class="nav-bar-icon icon-image-node-material"></div>
           <div class="icon-down-arrow"></div>
         </div>
-        <div class="toolBar-button">
-          <div class="toolBar-icon icon-image-object-data"></div>
+        <div class="nav-bar-button">
+          <div class="nav-bar-icon icon-image-object-data"></div>
           <div class="icon-text">Learning</div>
           <div class="icon-down-arrow"></div>
         </div>
       </div>
       <div class="navBarPageSelectors">
-        <ul class="navBarList">
-          <li class="navBarTab navHome">
+        <ul class="nav-bar-page-tabs">
+          <li class="nav-bar-tab">
             <a href="../index.html">Home</a>
           </li>
-          <li class="navBarTab navLearning navBarCurrentPage">
+          <li class="nav-bar-tab current-page">
             <a href="../learning/index.html">Learning</a>
           </li>
-          <li class="navBarTab navCommunity">
+          <li class="nav-bar-tab">
             <a href="../community/index.html">Community</a>
           </li>
         </ul>
       </div>
-      <div class="navDecoration navDecorationRight">
-        <div class="toolBar-button">
-          <div class="toolBar-icon icon-image-scene-data"></div>
+      <div class="nav-decoration right">
+        <div class="nav-bar-button">
+          <div class="nav-bar-icon icon-image-scene-data"></div>
           <div class="icon-down-arrow"></div>
           <div class="icon-text">Scene.001</div>
           <div class="icon-down-arrow"></div>
         </div>
-        <div class="toolBar-button toolBar-gizmo-toggle">
-          <div class="gizmo-toggle">
+        <div class="nav-bar-button gizmo-shading-toggle">
+          <div class="gizmo-toggle hidden">
             <input
               type="checkbox"
               id="gizmo-overlay"
@@ -64,14 +64,14 @@
             />
             <div class="gizmo-icon">
               <label for="gizmo-overlay">
-                <div class="toolBar-icon icon-image-gizmo"></div>
+                <div class="nav-bar-icon icon-image-gizmo"></div>
               </label>
             </div>
             <div class="gizmo-reveal-image"></div>
           </div>
           <div class="icon-down-arrow"></div>
         </div>
-        <div class="toolBar-button toolBar-shading-toggle">
+        <div class="goat-shading-toggle hidden">
           <input
             type="radio"
             id="shading-wireframe"
@@ -97,18 +97,18 @@
             id="shading-rendered"
             name="shading-picker"
           />
-          <div class="shading-toggle-buttons toolBar-button">
-            <label class="toolBar-shading-option" for="shading-wireframe">
-              <div class="toolBar-icon icon-image-shading-wireframe"></div>
+          <div class="shading-toggle-buttons nav-bar-button">
+            <label class="nav-bar-render-picker" for="shading-wireframe">
+              <div class="nav-bar-icon icon-image-shading-wireframe"></div>
             </label>
-            <label class="toolBar-shading-option" for="shading-solid">
-              <div class="toolBar-icon icon-image-shading-solid"></div>
+            <label class="nav-bar-render-picker" for="shading-solid">
+              <div class="nav-bar-icon icon-image-shading-solid"></div>
             </label>
-            <label class="toolBar-shading-option" for="shading-material">
-              <div class="toolBar-icon icon-image-shading-material"></div>
+            <label class="nav-bar-render-picker" for="shading-material">
+              <div class="nav-bar-icon icon-image-shading-material"></div>
             </label>
-            <label class="toolBar-shading-option" for="shading-rendered">
-              <div class="toolBar-icon icon-image-shading-rendered"></div>
+            <label class="nav-bar-render-picker" for="shading-rendered">
+              <div class="nav-bar-icon icon-image-shading-rendered"></div>
             </label>
             <div class="icon-down-arrow"></div>
           </div>
@@ -122,22 +122,47 @@
       </div>
     </nav>
     <main>
-      <h2>Resources:</h2>
-      <ul>
-        <li>
-          <a href="https://blender.org/" target="_blank"
-            >https://blender.org/</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/playlist?list=PLa1F2ddGya_-UvuAqHAksYnB0qL9yWDO6"
-            target="_blank"
-            >Blender Fundamentals video training playlist</a
-          >
-        </li>
-      </ul>
-      <img src="../assets/Under_Construction.gif" style="width: 320px" />
+      <div class="container content">
+        <div class="node-grid-row">
+          <div class="node-block">
+            <!-- Pick node label color -->
+            <div class="node-label node-label-red">
+              <div class="icon downward-arrow"></div>
+              <div class="node-label-text">Under Construction</div>
+              <div></div>
+            </div>
+            <div class="node-body">
+              <div class="node-entry">
+                <!-- Pick whether or not entry socket is present + color -->
+                <div class="node-socket socket-entry node-socket-blue"></div>
+                <div class="node-value">
+                  <h2>Resources:</h2>
+                  <ul>
+                    <li>
+                      <a href="https://blender.org/" target="_blank"
+                        >https://blender.org/</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.youtube.com/playlist?list=PLa1F2ddGya_-UvuAqHAksYnB0qL9yWDO6"
+                        target="_blank"
+                        >Blender Fundamentals video training playlist</a
+                      >
+                    </li>
+                  </ul>
+                  <img
+                    src="../assets/Under_Construction.gif"
+                    style="width: 320px; margin: auto"
+                  />
+                </div>
+                <!-- Pick whether or not exit socket is present + color -->
+                <div class="node-socket socket-exit node-socket-blue"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>

@@ -31,7 +31,7 @@ h3 {
 ul {
   padding: 0.5rem 0 0.5rem 1.5rem;
 }
-.header_bg {
+.header-background {
   position: relative;
   width: 100%;
   background-color: #69264a;
@@ -39,11 +39,11 @@ ul {
   background-position: center;
 }
 @media (min-width: 1920px) {
-  .header_bg {
+  .header-background {
     background-size: cover;
   }
 }
-.header_bg::before {
+.header-background::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -80,7 +80,7 @@ img {
   display: block;
 }
 
-input[type="radio"],
+.hidden input[type="radio"],
 input[type="checkbox"] {
   display: none;
 }
@@ -112,30 +112,30 @@ input[type="checkbox"] {
 }
 
 /* Navbar styles */
-.navBar {
+nav {
   background-color: #181818;
   display: grid;
   grid-auto-flow: column;
 }
 
 /* Hide navbar decoration on mobile */
-.navDecoration {
+.nav-decoration {
   display: none;
+  align-items: center;
+  padding: 0.25rem;
 }
 /* Hide extra navbar decoration while on narrow display */
-.toolBar-button.extraDecoration {
+.nav-bar-button.extraDecoration {
   display: none;
 }
-.navDecorationLeft {
+.nav-decoration.left {
   justify-self: left;
 }
-.navDecorationRight {
+.nav-decoration.right {
   justify-self: right;
 }
-.navBarPageSelectors {
-}
 
-.toolBar-button {
+.nav-bar-button {
   background-color: #282828;
   border: 1px solid;
   border-color: #8e8e8e;
@@ -148,38 +148,38 @@ input[type="checkbox"] {
   overflow: hidden;
 }
 
-.toolBar-button:hover {
+.nav-bar-button:hover {
   background-color: #454545;
 }
-.toolBar-button .shading-toggle-buttons {
+.nav-bar-button .shading-toggle-buttons {
   margin: 0;
 }
-div.toolBar-button.shading-toggle-buttons:hover {
+div.nav-bar-button.shading-toggle-buttons:hover {
   background-color: #282828;
 }
 
-.toolBar-shading-toggle,
-.toolBar-gizmo-toggle {
+.goat-shading-toggle,
+.gizmo-shading-toggle {
   display: none;
 }
-.toolBar-shading-option {
+.nav-bar-render-picker {
   border-right: 1px solid #181818;
   background-color: #545454;
 }
 
-.toolBar-shading-toggle
+.goat-shading-toggle
   input[type="radio"]:nth-child(1):checked
   ~ .shading-toggle-buttons
   label:nth-child(1),
-.toolBar-shading-toggle
+.goat-shading-toggle
   input[type="radio"]:nth-child(2):checked
   ~ .shading-toggle-buttons
   label:nth-child(2),
-.toolBar-shading-toggle
+.goat-shading-toggle
   input[type="radio"]:nth-child(3):checked
   ~ .shading-toggle-buttons
   label:nth-child(3),
-.toolBar-shading-toggle
+.goat-shading-toggle
   input[type="radio"]:nth-child(4):checked
   ~ .shading-toggle-buttons
   label:nth-child(4) {
@@ -199,19 +199,19 @@ div.toolBar-button.shading-toggle-buttons:hover {
   display: block;
 }
 
-.toolBar-shading-toggle
+.goat-shading-toggle
   input[type="radio"]:nth-child(1):checked
   ~ #rendered-goat-container
   div:nth-child(1),
-.toolBar-shading-toggle
+.goat-shading-toggle
   input[type="radio"]:nth-child(2):checked
   ~ #rendered-goat-container
   div:nth-child(2),
-.toolBar-shading-toggle
+.goat-shading-toggle
   input[type="radio"]:nth-child(3):checked
   ~ #rendered-goat-container
   div:nth-child(3),
-.toolBar-shading-toggle
+.goat-shading-toggle
   input[type="radio"]:nth-child(4):checked
   ~ #rendered-goat-container
   div:nth-child(4) {
@@ -228,22 +228,22 @@ div.toolBar-button.shading-toggle-buttons:hover {
   padding: 0.2rem 1.25rem;
   height: 2rem;
 }
-ul.navBarList {
+ul.nav-bar-page-tabs {
   display: block;
   margin: 0;
   text-align: center;
   list-style-type: none;
   padding: 0;
 }
-li.navBarTab {
+li.nav-bar-tab {
   display: inline-block;
 }
 
-.navBarList a:hover {
+.nav-bar-page-tabs a:hover {
   background-color: #777;
   color: #222;
 }
-.navBarTab a {
+.nav-bar-tab a {
   display: block;
   color: #969696;
   font-size: 1.2rem;
@@ -253,34 +253,32 @@ li.navBarTab {
   margin: 0.25em 0.2em 0;
   border-radius: 0.75em 0.75em 0 0;
 }
-li.navBarTab.navBarCurrentPage a {
+li.nav-bar-tab.current-page a {
   background-color: #303030;
 }
-.navBarTab.navBarCurrentPage a {
+.nav-bar-tab.current-page a {
   color: #f2f2f2;
 }
 @media (min-width: 768px) {
-  .navBar {
+  nav {
     grid-template-columns: 1fr 400px 1fr;
   }
-  .navDecoration {
+  .nav-decoration {
     display: flex;
-    align-items: center;
-    padding: 0.25rem;
   }
-  .navBarTab a {
+  .nav-bar-tab a {
     font-size: 1.5rem;
   }
 }
 
-@media (min-width: 900px) {
-  .toolBar-button.extraDecoration {
+@media (min-width: 960px) {
+  .nav-bar-button.extraDecoration {
     display: flex;
   }
 }
 @media (min-width: 1300px) {
-  .toolBar-shading-toggle,
-  .toolBar-gizmo-toggle {
+  .goat-shading-toggle,
+  .gizmo-shading-toggle {
     display: flex;
   }
 }
@@ -406,7 +404,7 @@ li.navBarTab.navBarCurrentPage a {
 }
 
 /*Icon images*/
-.toolBar-icon {
+.nav-bar-icon {
   height: 2rem;
   width: 2rem;
   background-repeat: no-repeat;
@@ -457,7 +455,9 @@ li.navBarTab.navBarCurrentPage a {
   position: absolute;
   width: 12.5rem;
   height: 12.5rem;
-  top: 20rem;
+  top: 18rem;
+  right: 0.5rem;
+  scale: 0.8;
 }
 .viewport-goat-solid {
   background-image: url(./assets/render_goats/goat_solid.webp);
