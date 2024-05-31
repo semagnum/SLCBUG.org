@@ -219,6 +219,7 @@ div.nav-bar-button.shading-toggle-buttons:hover {
 }
 
 .icon-link {
+  display: inline-block;
   text-decoration: none;
 }
 
@@ -405,6 +406,7 @@ li.nav-bar-tab.current-page a {
 
 /*Icon images*/
 .nav-bar-icon {
+  display: block;
   height: 2rem;
   width: 2rem;
   background-repeat: no-repeat;

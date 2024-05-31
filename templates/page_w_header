@@ -22,7 +22,7 @@
       <div class="nav-decoration left">
         <div class="nav-bar-button small">
           <a class="icon-link" href="https://www.blender.org/" target="_blank">
-            <div class="nav-bar-icon icon-image-blender-logo"></div>
+            <span class="nav-bar-icon icon-image-blender-logo"></span>
           </a>
         </div>
         <div class="nav-bar-button extraDecoration">
