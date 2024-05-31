@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Learning and using Blender together!" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>SLC Blender User Group</title>
+  </head>
+  <body>
+    <header class="header-background">
+      <div class="container">
+        <h1>
+          <span>
+            SLC Blender User Group:
+            <em>Learning and using Blender together!</em>
+          </span>
+        </h1>
+      </div>
+    </header>
+    <nav>
+      <div class="nav-decoration left">
+        <div class="nav-bar-button small">
+          <a class="icon-link" href="https://www.blender.org/" target="_blank">
+            <span class="nav-bar-icon icon-image-blender-logo"></span>
+          </a>
+        </div>
+        <div class="nav-bar-button extraDecoration">
+          <div class="nav-bar-icon icon-image-node-material"></div>
+          <div class="icon-down-arrow"></div>
+        </div>
+        <div class="nav-bar-button extraDecoration">
+          <div class="nav-bar-icon icon-image-object-data"></div>
+          <!-- Replace "Page" with relevant page category name-->
+          <div class="icon-text">Page</div>
+          <div class="icon-down-arrow"></div>
+        </div>
+      </div>
+      <div class="navBarPageSelectors">
+        <ul class="nav-bar-page-tabs">
+          <!-- Add "current-page" class to most relevant tab-->
+          <li class="nav-bar-tab">
+            <a href="../index.html">Home</a>
+          </li>
+          <li class="nav-bar-tab">
+            <a href="./learning/index.html">Learning</a>
+          </li>
+          <li class="nav-bar-tab">
+            <a href="./community/index.html">Community</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-decoration right">
+        <div class="nav-bar-button">
+          <div class="nav-bar-icon icon-image-scene-data"></div>
+          <div class="icon-down-arrow"></div>
+          <!-- Replace "Scene" with relevant page name-->
+          <div class="icon-text">Scene</div>
+          <div class="icon-down-arrow"></div>
+        </div>
+        <div class="nav-bar-button gizmo-shading-toggle">
+          <div class="gizmo-toggle hidden-input">
+            <input
+              type="checkbox"
+              id="gizmo-overlay"
+              name="gizmo-overlay"
+              value="gizmo"
+            />
+            <div class="gizmo-icon">
+              <label for="gizmo-overlay">
+                <div class="nav-bar-icon icon-image-gizmo"></div>
+              </label>
+            </div>
+            <div class="gizmo-reveal-image"></div>
+          </div>
+          <div class="icon-down-arrow"></div>
+        </div>
+        <div class="goat-shading-toggle hidden">
+          <input
+            type="radio"
+            id="shading-wireframe"
+            value="shading-wireframe"
+            name="shading-picker"
+            checked
+          />
+          <input
+            type="radio"
+            id="shading-solid"
+            value="shading-solid"
+            name="shading-picker"
+          />
+          <input
+            type="radio"
+            value="shading-material"
+            id="shading-material"
+            name="shading-picker"
+          />
+          <input
+            type="radio"
+            value="shading-rendered"
+            id="shading-rendered"
+            name="shading-picker"
+          />
+          <div class="shading-toggle-buttons nav-bar-button">
+            <label class="nav-bar-render-picker" for="shading-wireframe">
+              <div class="nav-bar-icon icon-image-shading-wireframe"></div>
+            </label>
+            <label class="nav-bar-render-picker" for="shading-solid">
+              <div class="nav-bar-icon icon-image-shading-solid"></div>
+            </label>
+            <label class="nav-bar-render-picker" for="shading-material">
+              <div class="nav-bar-icon icon-image-shading-material"></div>
+            </label>
+            <label class="nav-bar-render-picker" for="shading-rendered">
+              <div class="nav-bar-icon icon-image-shading-rendered"></div>
+            </label>
+            <div class="icon-down-arrow"></div>
+          </div>
+          <div id="rendered-goat-container">
+            <div class="rendered-goat-image viewport-goat-wireframe"></div>
+            <div class="rendered-goat-image viewport-goat-solid"></div>
+            <div class="rendered-goat-image viewport-goat-material"></div>
+            <div class="rendered-goat-image viewport-goat-rendered"></div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <!-- If you want to use the default layout as-is, place content inside the div beneath here-->
+      <div class="container content"></div>
+    </main>
+  </body>
+</html>

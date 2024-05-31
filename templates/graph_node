@@ -1,0 +1,19 @@
+<div class="node-grid-row">
+  <div class="node-block">
+    <!-- Pick node label color -->
+    <div class="node-label node-label-green">
+      <div class="icon downward-arrow"></div>
+      <div class="node-label-text"><!-- Section Title --></div>
+      <div></div>
+    </div>
+    <div class="node-body">
+      <div class="node-entry">
+        <!-- Pick whether or not entry socket is present + color -->
+        <div class="node-socket socket-entry node-socket-blue"></div>
+        <div class="node-value"><!-- Section Body --></div>
+        <!-- Pick whether or not exit socket is present + color -->
+        <div class="node-socket socket-exit node-socket-blue"></div>
+      </div>
+    </div>
+  </div>
+</div>
