@@ -28,13 +28,16 @@ h3 {
   color: hsl(210, 70%, 60%);
   padding: 0.5rem 0;
 }
+p + p {
+  padding-top: 0.75rem;
+}
 ul {
   padding: 0.5rem 0 0.5rem 1.5rem;
 }
 .header-background {
   position: relative;
   width: 100%;
-  background-color: #69264a;
+  background-color: #383838;
   background-image: url("./assets/blender_viewport.webp");
   background-position: center;
 }
@@ -193,9 +196,7 @@ div.nav-bar-button.shading-toggle-buttons:hover {
   display: none;
 }
 
-.gizmo-toggle
-  input[type="checkbox"]:nth-child(1):checked
-  ~ .gizmo-reveal-image {
+.gizmo-toggle input[type="checkbox"]:nth-child(1):checked ~ .gizmo-reveal-image {
   display: block;
 }
 
@@ -327,6 +328,8 @@ li.nav-bar-tab.current-page a {
   color: #ededed;
   cursor: grab;
   font-size: large;
+  padding: 0;
+  font-weight: 400;
 }
 
 .node-body {
